@@ -1,0 +1,27 @@
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <script data-dojo-config="
+                dojoBlankHtmlUrl:'/blank.html',
+                baseUrl: 'js/',
+                tlmSiblingOfDojo: false,
+                packages: [
+                    { name: 'h5tbge', location: 'h5tbge', main: 'app' }
+                    ],
+                async: true"
+            src="http://ajax.googleapis.com/ajax/libs/dojo/1.7.1/dojo/dojo.js"
+            type="text/javascript">
+    </script>
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/dojo/1.7.1/dojo/resources/dojo.css" type="text/css" media="screen" charset="utf-8" />
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/dojo/1.7.1/dijit/themes/claro/claro.css" type="text/css" media="screen" charset="utf-8" />
+    <script type="text/javascript" charset="utf-8">
+        require(['h5tbge/app', 'testgame/terrain/sand'], function(app, testgame_terrain_sand)
+            {
+            var s = new testgame_terrain_sand();
+            console.debug("Sand has", s.hasResource('petrol').quantity, "petrol in it.");
+            });
+    </script>
+</head>
+<body class="claro">
+</body>
+</html>
